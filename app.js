@@ -5,7 +5,7 @@ const app = express();
 
 // 1 Middlewares
 app.use(morgan('dev'));
-
+app.use(express.static(`${__dirname}/public`))
 app.use(express.json());
 
 const tourRouter = require('./routes/tourRouter');
